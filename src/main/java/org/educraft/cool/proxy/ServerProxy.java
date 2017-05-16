@@ -1,4 +1,4 @@
-package org.gardenstreetacademy.cool.proxy;
+package org.educraft.cool.proxy;
 
 public class ServerProxy implements ICommonProxy{
 	

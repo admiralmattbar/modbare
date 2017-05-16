@@ -1,11 +1,7 @@
-package org.gardenstreetacademy.cool;
+package org.educraft.cool;
 
-import org.gardenstreetacademy.cool.init.ModBlocks;
-import org.gardenstreetacademy.cool.init.ModCrafting;
-import org.gardenstreetacademy.cool.init.ModItems;
-import org.gardenstreetacademy.cool.init.ModMaterials;
-import org.gardenstreetacademy.cool.proxy.ICommonProxy;
-import org.gardenstreetacademy.cool.worldgen.ModWorldGen;
+
+import org.educraft.cool.proxy.ICommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -28,13 +24,6 @@ public class Main {
 	public void preInit(FMLPreInitializationEvent event){
 		System.out.println("preInit");
 		
-		ModMaterials.init();
-		
-		ModItems.init();
-		ModItems.register();
-		
-		ModBlocks.init();
-		ModBlocks.register();
 	}
 	
 	@EventHandler
@@ -42,8 +31,7 @@ public class Main {
 		System.out.println("Init");
 		
 		proxy.init();
-		ModCrafting.register();
-		GameRegistry.registerWorldGenerator(new ModWorldGen(), 0);
+		
 	}
 	
 	@EventHandler
